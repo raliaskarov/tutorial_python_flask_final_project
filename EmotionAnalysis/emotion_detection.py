@@ -8,19 +8,25 @@ import requests
 
 def emotion_detector(text_to_analyse):
     """
-    Returns a dict with keys:
-      - label:   emotion
-      - score:   float or None
-      - error:   None or a short message
+    Returns dict, for example:
+      {'anger': 0.0043339236,
+       'disgust': 0.00037549555, 
+       'fear': 0.0034732423,
+       'joy': 0.9947189,
+       'sadness': 0.012704818,
+       'dominant_emotion': 'joy'}
     """
     print(f"Received text_to_analyse: {text_to_analyse!r}")
 
     # 1) Empty‐input check
     if not text_to_analyse or text_to_analyse.strip() == "":
         return {
-            "label": "ERROR_No Text Provided",
-            "score": None,
-            "error": "No text provided. Input text"
+        'anger': None,
+        'disgust': None, 
+        'fear': None,
+        'joy': None,
+        'sadness': None,
+        'dominant_emotion': None
         }
 
     # 2) URL 
@@ -40,13 +46,28 @@ def emotion_detector(text_to_analyse):
         return {"label": None, "score": None, "error": f"Request failed: {e}"}
 
     print("Response status code: ", response.status_code)
-    if response.status_code != 200:
+    if response.status_code == 400:
         print(f"Error with status code: {response.status_code}")
-        return {
-            "label": None,
-            "score": None,
-            "error": f"Text is unparsable. Please provide meaningful text."
+        emotions = {
+            'anger': None,
+            'disgust': None, 
+            'fear': None,
+            'joy': None,
+            'sadness': None,
+            'dominant_emotion': None
         }
+
+    if response.status_code != 400:
+    print(f"Error with status code: {response.status_code}")
+    emotions = {
+        'anger': None,
+        'disgust': None, 
+        'fear': None,
+        'joy': None,
+        'sadness': None,
+        'dominant_emotion': None
+    }
+
 
     # 4) Parse JSON and return
     try:
@@ -62,6 +83,13 @@ def emotion_detector(text_to_analyse):
 
     except Exception as e:
         print(f"Error parsing JSON: {e}")
-        return {"label": None, "score": None, "error": f"Unexpected response format: {e}"}
+        return {
+            'anger': None,
+            'disgust': None,
+            'fear': None,
+            'joy': None,
+            'sadness': None,
+            'dominant_emotion': None
+        }
 
     return emotions

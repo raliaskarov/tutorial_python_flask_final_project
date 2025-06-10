@@ -16,9 +16,9 @@ def emotion_detector_route():
     # call function
     response = emotion_detector(text_to_analyze)
 
-    # if error in response, throw it
-    if response.get("error"):
-        return f"Error: {response['error']}", 400
+    # if response is None throw error
+    if response.get('dominant_emotion') == None:
+        return "Invalid text! Please try again!", 400
 
     response_text = f"For the given statement, the system response is \
     'anger': {response['anger']}, \
@@ -28,6 +28,7 @@ def emotion_detector_route():
     'sadness': {response['sadness']}. \
     The dominant emotion is {response['dominant_emotion']}."
 
+    print(f"Returning response: {response_text}")
     return response_text
 
 @app.route("/")

@@ -2,27 +2,27 @@
   "emotionPredictions": [
     {
       "emotion": {
-        "anger": 0.029103195,
-        "disgust": 0.0067921067,
-        "fear": 0.027528232,
-        "joy": 0.876574,
-        "sadness": 0.06151191,
-        "dominant_emotion": "joy"
+        "anger": 0.005384796,
+        "disgust": 0.0038196347,
+        "fear": 0.99197227,
+        "joy": 0.006359948,
+        "sadness": 0.06478654,
+        "dominant_emotion": "fear"
       },
       "target": "",
       "emotionMentions": [
         {
           "span": {
             "begin": 0,
-            "end": 23,
-            "text": "I think I am having fun"
+            "end": 11,
+            "text": "i am afraid"
           },
           "emotion": {
-            "anger": 0.029103195,
-            "disgust": 0.0067921067,
-            "fear": 0.027528232,
-            "joy": 0.876574,
-            "sadness": 0.06151191
+            "anger": 0.005384796,
+            "disgust": 0.0038196347,
+            "fear": 0.99197227,
+            "joy": 0.006359948,
+            "sadness": 0.06478654
           }
         }
       ]
