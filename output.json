@@ -2,27 +2,27 @@
   "emotionPredictions": [
     {
       "emotion": {
-        "anger": 0.0068210675,
-        "disgust": 0.00360616,
-        "fear": 0.9907291,
-        "joy": 0.0057615982,
-        "sadness": 0.073330835,
-        "dominant_emotion": "fear"
+        "anger": 0.026331056,
+        "disgust": 0.010276349,
+        "fear": 0.047897227,
+        "joy": 0.04570674,
+        "sadness": 0.7518207,
+        "dominant_emotion": "sadness"
       },
       "target": "",
       "emotionMentions": [
         {
           "span": {
             "begin": 0,
-            "end": 40,
-            "text": "I am really afraid that this will happen"
+            "end": 2,
+            "text": ":("
           },
           "emotion": {
-            "anger": 0.0068210675,
-            "disgust": 0.00360616,
-            "fear": 0.9907291,
-            "joy": 0.0057615982,
-            "sadness": 0.073330835
+            "anger": 0.026331056,
+            "disgust": 0.010276349,
+            "fear": 0.047897227,
+            "joy": 0.04570674,
+            "sadness": 0.7518207
           }
         }
       ]
