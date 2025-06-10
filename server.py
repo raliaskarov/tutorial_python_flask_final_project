@@ -16,9 +16,8 @@ def emotion_detector_route():
     # call function
     response = emotion_detector(text_to_analyze)
 
-
     # if error in response, throw it
-     if response.get("error"):
+    if response.get("error"):
         return f"Error: {response['error']}", 400
 
     response_text = f"For the given statement, the system response is \
@@ -36,5 +35,5 @@ def render_index_page():
     return render_template("index.html")
 
 if __name__ == "__main__":
-    app.run(debug=True, host"0.0.0.0", port=5000)
+    app.run(debug=True, host="0.0.0.0", port=5000)
     
