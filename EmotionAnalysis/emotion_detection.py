@@ -46,9 +46,10 @@ def emotion_detector(text_to_analyse):
         return {"label": None, "score": None, "error": f"Request failed: {e}"}
 
     print("Response status code: ", response.status_code)
-    if response.status_code == 400:
+
+    if response.status_code != 200:
         print(f"Error with status code: {response.status_code}")
-        emotions = {
+        return {
             'anger': None,
             'disgust': None, 
             'fear': None,
@@ -56,17 +57,6 @@ def emotion_detector(text_to_analyse):
             'sadness': None,
             'dominant_emotion': None
         }
-
-    if response.status_code != 400:
-    print(f"Error with status code: {response.status_code}")
-    emotions = {
-        'anger': None,
-        'disgust': None, 
-        'fear': None,
-        'joy': None,
-        'sadness': None,
-        'dominant_emotion': None
-    }
 
 
     # 4) Parse JSON and return

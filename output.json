@@ -2,27 +2,27 @@
   "emotionPredictions": [
     {
       "emotion": {
-        "anger": 0.005384796,
-        "disgust": 0.0038196347,
-        "fear": 0.99197227,
-        "joy": 0.006359948,
-        "sadness": 0.06478654,
-        "dominant_emotion": "fear"
+        "anger": 0.0063314,
+        "disgust": 0.005223638,
+        "fear": 0.074054584,
+        "joy": 0.0046975184,
+        "sadness": 0.9819713,
+        "dominant_emotion": "sadness"
       },
       "target": "",
       "emotionMentions": [
         {
           "span": {
             "begin": 0,
-            "end": 11,
-            "text": "i am afraid"
+            "end": 8,
+            "text": "i am sad"
           },
           "emotion": {
-            "anger": 0.005384796,
-            "disgust": 0.0038196347,
-            "fear": 0.99197227,
-            "joy": 0.006359948,
-            "sadness": 0.06478654
+            "anger": 0.0063314,
+            "disgust": 0.005223638,
+            "fear": 0.074054584,
+            "joy": 0.0046975184,
+            "sadness": 0.9819713
           }
         }
       ]

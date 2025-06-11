@@ -11,13 +11,13 @@ def emotion_detector_route():
 
     # if no text, throw error
     if not text_to_analyze or text_to_analyze.strip() == "":
-        return "String empty, please provide text", 400
+        return "Invalid text! Please try again!", 400
 
     # call function
     response = emotion_detector(text_to_analyze)
 
     # if response is None throw error
-    if response.get('dominant_emotion') == None:
+    if response.get('dominant_emotion') is None:
         return "Invalid text! Please try again!", 400
 
     response_text = f"For the given statement, the system response is \
