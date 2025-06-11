@@ -2,27 +2,27 @@
   "emotionPredictions": [
     {
       "emotion": {
-        "anger": 0.0063314,
-        "disgust": 0.005223638,
-        "fear": 0.074054584,
-        "joy": 0.0046975184,
-        "sadness": 0.9819713,
-        "dominant_emotion": "sadness"
+        "anger": 0.0132405795,
+        "disgust": 0.0020517302,
+        "fear": 0.009090992,
+        "joy": 0.9699522,
+        "sadness": 0.054984167,
+        "dominant_emotion": "joy"
       },
       "target": "",
       "emotionMentions": [
         {
           "span": {
             "begin": 0,
-            "end": 8,
-            "text": "i am sad"
+            "end": 26,
+            "text": "I love this new technology"
           },
           "emotion": {
-            "anger": 0.0063314,
-            "disgust": 0.005223638,
-            "fear": 0.074054584,
-            "joy": 0.0046975184,
-            "sadness": 0.9819713
+            "anger": 0.0132405795,
+            "disgust": 0.0020517302,
+            "fear": 0.009090992,
+            "joy": 0.9699522,
+            "sadness": 0.054984167
           }
         }
       ]

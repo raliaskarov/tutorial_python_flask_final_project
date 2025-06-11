@@ -1,4 +1,12 @@
 # server.py
+"""
+Simple server to run Watson AI to analyse emotions.
+Receives:
+    - input text string from html element
+Returns:
+    - dictionary with emotion scores and dominant emotion
+    - throws error if input is blank
+"""
 
 from flask import Flask, render_template, request
 from EmotionAnalysis.emotion_detection import emotion_detector
@@ -7,6 +15,14 @@ app = Flask("Sentiment Analyzer")
 
 @app.route("/emotionDetector")
 def emotion_detector_route():
+    """
+    Route to emotion analyzer
+    Receives:
+        - Input string
+    Returns:
+        - Dictionary with emotions
+        - Error if input is empty
+    """
     text_to_analyze = request.args.get("textToAnalyze")
 
     # if no text, throw error
@@ -33,8 +49,10 @@ def emotion_detector_route():
 
 @app.route("/")
 def render_index_page():
+    """
+    Default homepage
+    """
     return render_template("index.html")
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)
-    
